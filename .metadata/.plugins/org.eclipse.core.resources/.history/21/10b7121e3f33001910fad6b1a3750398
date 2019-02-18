@@ -1,0 +1,17 @@
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Connection;
+
+
+/**
+ *
+ */
+
+/**
+ * @author internousdev
+ *
+ */
+public class DBConnector {
+
+
+}

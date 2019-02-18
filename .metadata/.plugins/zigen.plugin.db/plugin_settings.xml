@@ -9,5 +9,9 @@
    <string>KEY_FILTER_LIST_COLUMN</string>
    <object class="java.util.ArrayList"/>
   </void>
+  <void method="put">
+   <string>KEY_LINKED_EDITOR</string>
+   <boolean>true</boolean>
+  </void>
  </object>
 </java>

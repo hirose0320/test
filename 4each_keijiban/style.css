@@ -1,0 +1,138 @@
+.logo{
+    margin-left: 10px;
+}
+
+header{
+    clear:left;
+    width:100%;
+    height:50px;
+    background-color: black;
+    line-height: 50px;
+}
+
+header ol li{
+    float:left;
+    list-style: none;
+    padding-left: 40px;
+    padding-right:50px;
+    color:white;
+}
+
+
+body{
+    font-family: "Hiragino Kaku Gothic ProN","メイリオ",sans-serif;
+}
+
+h2{
+    margin-top:30px;
+    
+    border-left:4px solid red; 
+    margin-left: 20px ;
+    padding-top 5px;
+    padding-left:5px;
+    padding-bottom: 5px;
+    width: 500px;
+    font-size: 20px;
+    
+}
+
+
+
+main{clear:left;
+}
+
+.main-container{
+    width:100%;
+}
+
+
+.left{
+    float:left;
+    width:67%;
+    margin-bottom: 50px;
+}
+
+.left h1{
+    border-bottom: 2px solid black;
+    border-left: 5px solid black;
+    padding-left:10px;
+    margin-top:10px;
+}
+
+h3{
+    border-bottom: 2px solid #c7c7c7;
+}
+
+
+.kiji{
+    margin: 0 auto;
+    width:96%;
+    background-color: #fbfbfb;
+    padding-top:20px;
+    margin-top:15px;
+    padding-left:20px;
+    border:3px #c7c7c7 solid;
+    padding-bottom: 20px;
+    
+}
+
+.right{
+    float:right;
+    margin-left:20px;
+    margin-top:10px;
+    width:30%;
+	}
+
+.right h3{
+    border-bottom: 2px
+        dotted gray;
+}
+
+.right ul{
+	padding-left:5px;
+	}
+
+.right li{
+    list-style: none;
+    padding-left:10px;
+}
+
+form{
+    margin: 0 auto;
+    width:98%;
+    background-color:#fbfbfb ;
+    border:3px #c7c7c7 solid;
+    padding-bottom: 20px;
+}
+
+form div{
+    padding-left:15px;
+    padding-bottom: 10px;
+}
+
+.text,textarea{
+    border:1px solid #dfdfdf;
+    padding:5px;
+    color: #999;
+    background:#fff;
+}
+
+.submit{
+    border:1px solid lightgray;
+    padding:4px 10px;
+    color:white;
+    background-color: #6a6a6a;
+    border-radius:5px;
+    border-bottom: solid 2px #343434;
+    
+}
+
+footer{
+    clear:left;
+    width:100%;
+    height:60px;
+    background-color: black;
+    color:white;
+    text-align: center;
+    line-height:60px;
+    }

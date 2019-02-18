@@ -1,0 +1,21 @@
+.box1{
+    float:left;
+    width:100px;
+    height:100px;
+    background-color:blue;
+}
+.box2{
+    background-color:red;
+    float:right;
+    width:100px;
+    height:100px;
+}
+
+img{
+    float:left;
+    width:200px;
+}
+
+p{
+    clear:left;
+}

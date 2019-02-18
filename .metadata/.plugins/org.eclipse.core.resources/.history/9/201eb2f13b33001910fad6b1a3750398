@@ -1,0 +1,12 @@
+drop database if exists testdb;
+create database testdb;
+use testdb;
+create table sample_table(
+user_id int,
+user_name varchar(50),
+user_age int
+user_mail varchar(50)
+);
+insert into test_table values(1,"Yamada","21","xxx@yahoo.co.jp");
+insert into test_table values(2,"Sato","39","yyy@google.com");
+insert into test_table values(3,"harada","44","zzz@yahoo.co.jp");
