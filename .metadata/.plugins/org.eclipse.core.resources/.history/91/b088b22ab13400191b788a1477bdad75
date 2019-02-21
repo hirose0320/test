@@ -1,0 +1,17 @@
+set names utf8;
+set foreign_key_checks = 0;
+drop database if exists logindb_hirose;
+create database logindb_hirose;
+use logindb_hirose;
+
+create table logindb_hirose(
+id int,
+user_name varchar(255),
+password varchar(255)
+);
+
+insert into logindb-hirose values
+(1,"taro","123"),
+(2,"jiro","123"),
+(3,"hanako","123"),
+(4,"saburo","123");
