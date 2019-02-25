@@ -1,0 +1,13 @@
+package com.internousdev.template.dao;
+
+import com.internousdev.template.util.DBConnector;
+
+public class LoginDAO {
+
+	public LoginDAO{
+		public LoginDTO getLoginUserInfo(String loginUserId,String loginPassword){
+
+			DBConnector dbConnector=new DBConnector();
+		}
+	}
+}
