@@ -27,7 +27,8 @@ public class UserCreateConfirmAction extends ActionSupport implements SessionAwa
 		}else{
 			setErrorMessage("未入力の項目があります。");
 			result=ERROR;
-		}return result;
+		}
+		return result;
 	}
 
 	public String getLoginUserId(){

@@ -42,12 +42,12 @@
 			<result name="success">buyItemConfirm.jsp</result>
 		</action>
 
-		<action name="BuyItemeConfirmAction"
+		<action name="BuyItemConfirmAction"
 			class="com.internousdev.template.action.BuyItemConfirmAction" method="execute">
-			<result name="success">buyItemConplete.jsp</result>
+			<result name="success">buyItemComplete.jsp</result>
 		</action>
 
-		<action name="MyPagemAction" class="com.internousdev.template.action.MyPageAction"
+		<action name="MyPageAction" class="com.internousdev.template.action.MyPageAction"
 			method="execute">
 			<result name="success">myPage.jsp</result>
 		</action>

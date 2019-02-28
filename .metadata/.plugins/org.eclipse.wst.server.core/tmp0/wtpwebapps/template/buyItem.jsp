@@ -10,7 +10,7 @@
 <meta http-equiv="imagetoolbar" content="no" />
 <meta name="description" content="" />
 <meta name="keywords" content="" />
-<title>a</title>
+<title>buyItem画面</title>
 
 <style type="text/css">
 body {
