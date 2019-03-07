@@ -7,14 +7,14 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.internousdev.webproj5.dto.HelloStrutsDTO;
+import com.internousdev.webproj5.dto.ItemListDTO;
 import com.internousdev.webproj5.util.DBConnector;
 
 public class HelloStrutsDAO {
 
-	List<HelloStrutsDTO> helloStrutsDTOList=new ArrayList<HelloStrutsDTO>();
+	List<ItemListDTO> helloStrutsDTOList=new ArrayList<ItemListDTO>();
 
-	public List<HelloStrutsDTO> select(){
+	public List<ItemListDTO> select(){
 		DBConnector db=new DBConnector();
 		Connection con=db.getConnection();
 
@@ -24,7 +24,7 @@ public class HelloStrutsDAO {
 			ResultSet rs=ps.executeQuery();
 
 			while(rs.next()){
-				HelloStrutsDTO dto=new HelloStrutsDTO();
+				ItemListDTO dto=new ItemListDTO();
 				dto.setUserId(rs.getInt("user_id"));
 				dto.setUserName(rs.getString("user_name"));
 				dto.setPassword(rs.getString("password"));

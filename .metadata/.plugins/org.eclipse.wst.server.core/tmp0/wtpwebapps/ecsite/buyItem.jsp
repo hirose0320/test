@@ -95,6 +95,7 @@ table {
 					</tr>
 				</table>
 			</s:form>
+			<img src="/WebContent/img/indian1.jpeg" />
 
 			<div>
 				<p>

@@ -7,12 +7,12 @@ import java.util.Map;
 import org.apache.struts2.interceptor.SessionAware;
 
 import com.internousdev.webproj5.dao.HelloStrutsDAO;
-import com.internousdev.webproj5.dto.HelloStrutsDTO;
+import com.internousdev.webproj5.dto.ItemListDTO;
 import com.opensymphony.xwork2.ActionSupport;
 
 public class HelloStrutsAction extends ActionSupport implements SessionAware{
 
-	private List<HelloStrutsDTO> helloStrutsDTOList = new ArrayList<HelloStrutsDTO>();
+	private List<ItemListDTO> helloStrutsDTOList = new ArrayList<ItemListDTO>();
     private Map<String,Object>session;
 
 	public String execute(){
