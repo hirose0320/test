@@ -23,11 +23,18 @@ public class UserListAction extends ActionSupport implements SessionAware {
 		if (createUser.size() > 0) {
 			session.put("createUser", createUser);
 			ret = SUCCESS;
-		} else {
-			ret = ERROR;
+
 		}
 		return ret;
 
+	}
+
+	public List<UserListDTO> getCreateUser() {
+		return createUser;
+	}
+
+	public void setCreateUser(List<UserListDTO> createUser) {
+		this.createUser = createUser;
 	}
 
 	public Map<String, Object> getSession() {
@@ -35,7 +42,7 @@ public class UserListAction extends ActionSupport implements SessionAware {
 	}
 
 	public void setSession(Map<String, Object> session) {
-
 		this.session = session;
 	}
+
 }

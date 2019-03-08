@@ -77,7 +77,7 @@ table {
 				</p>
 			</div>
 			<div>
-				<a href='<s:url action="HomeAction"/>'>ログインへ</a>
+				<a href='<s:url action="AdminAction"/>'>管理者画面へ</a>
 			</div>
 		</div>
 	</div>

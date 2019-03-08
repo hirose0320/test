@@ -5,6 +5,7 @@ public class UserListDTO {
 	private String loginPassword;
 	private String userName;
 	private String insert_date;
+	private String id;
 
 	public String getLoginId() {
 		return loginId;
@@ -37,5 +38,15 @@ public class UserListDTO {
 	public void setInsert_date(String insert_date) {
 		this.insert_date = insert_date;
 	}
+
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
+
 
 }

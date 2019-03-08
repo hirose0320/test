@@ -11,7 +11,6 @@ public class ItemCreateConfirmAction extends ActionSupport implements SessionAwa
 	private String iname;
 	private String iprice;
 	private String istock;
-
 	public Map<String, Object> session;
 	private String errorMessage;
 

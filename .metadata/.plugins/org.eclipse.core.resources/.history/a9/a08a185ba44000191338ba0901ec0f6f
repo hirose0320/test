@@ -1,0 +1,53 @@
+package com.internousdev.ecsite.action;
+
+import java.sql.SQLException;
+
+import org.apache.struts2.interceptor.SessionAware;
+
+import com.internousdev.ecsite.dao.UserListDeleteDAO;
+import com.opensymphony.xwork2.ActionSupport;
+
+public class UserListDeleteCompleteAction extends ActionSupport implements SessionAware{
+	private deleteFlg;
+	private message;
+	private UserListDeleteDAO DAO =new UserListDeleteDAO();
+	private ArrayList<UserListDTO> createUser = new ArrayList<UserListDTO>();
+	public Map<String,Object> session;
+
+
+
+	public String execute() throws SQLException {
+		if (!session.containsKey("id")) {
+			return ERROR;
+		}
+		if (deleteFlg == null) {
+			String item_transaction_id = session.get("id").toString();
+			String user_master_id = session.get("login_user_id").toString();
+
+			myPageList = DAO.getMyPageUserInfo(item_transaction_id, user_master_id);
+		} else if (deleteFlg.equals("1")) {
+			delete();
+		}
+
+		String result = SUCCESS;
+		return result;
+	}
+
+	public void delete() throws SQLException {
+
+		String item_transaction_id = session.get("id").toString();
+		String user_master_id = session.get("login_user_id").toString();
+
+		int res = DAO.buyItemHistoryDelete(item_transaction_id, user_master_id);
+
+		if (res > 0) {
+			myPageList = null;
+			setMessage("商品情報を正しく削除しました。");
+		} else if (res == 0) {
+			setMessage("商品情報の削除に失敗しました。");
+		}
+	}
+
+
+
+}

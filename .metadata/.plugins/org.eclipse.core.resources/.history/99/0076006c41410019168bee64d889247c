@@ -1,0 +1,31 @@
+package com.internousdev.ecsite.dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+import com.internousdev.ecsite.util.DBConnector;
+
+public class ItemListDeleteDAO {
+
+	DBConnector db = new DBConnector();
+	Connection con = db.getConnection();
+
+	public int ItemDelete() throws SQLException {
+		String sql = "DELETE FROM item_info_transaction WHERE insert_date NOT IN ('null')";
+
+		PreparedStatement ps;
+		int result = 0;
+
+		try {
+			ps = con.prepareStatement(sql);
+			result = ps.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			con.close();
+		}
+		return result;
+	}
+
+}

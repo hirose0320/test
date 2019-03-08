@@ -77,6 +77,7 @@ table {
 			</s:form>
 			<br />
 
+
 			<p>
 				新規ユーザー登録は <a href='<s:url action="UserCreateAction"/>'>こちら</a>
 			</p>

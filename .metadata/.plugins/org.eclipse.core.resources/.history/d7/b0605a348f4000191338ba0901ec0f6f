@@ -1,0 +1,35 @@
+package com.internousdev.ecsite.dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.List;
+
+import com.internousdev.ecsite.dto.UserListDTO;
+import com.internousdev.ecsite.util.DBConnector;
+
+public class UserListDeleteDAO {
+
+	public List<UserListDTO> select() {
+		DBConnector db = new DBConnector();
+		Connection con = db.getConnection();
+
+		// insert_date=nullを除いてすべてのユーザー情報を一括削除する
+		String sql = "DELETE FROM login_user_transaction WHERE insert_date NOT IN ('null')";
+
+		int result = 0;
+
+		try {
+			PreparedStatement ps = con.prepareStatement(sql);
+			result = ps.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			con.close();
+		}
+		return result;
+
+	}
+
+}

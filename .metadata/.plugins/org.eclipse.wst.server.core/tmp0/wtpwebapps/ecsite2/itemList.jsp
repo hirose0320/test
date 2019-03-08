@@ -92,9 +92,9 @@ table {
 					</tr>
 				</s:iterator>
 			</table>
-			<s:form action="ItemListAction">
-				<input type="hidden" name="deleteFlg" value="1">
-				<s:submit value="削除" method="delete" />
+			<s:form action="ItemListDeleteConfirmAction">
+
+				<s:submit value="削除" />
 			</s:form>
 
 			<s:if test="message !=null">

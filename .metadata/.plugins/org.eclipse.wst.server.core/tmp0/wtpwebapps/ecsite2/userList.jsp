@@ -69,33 +69,37 @@ table {
 			<p>ItemList</p>
 		</div>
 		<div>
-
-			<h3>ユーザー登録情報は以下になります。</h3>
-			<table border="1">
-				<tr>
-					<th>チェック</th>
-					<th>商品名</th>
-					<th>販売値段</th>
-					<th>在庫数</th>
-					<th>登録日</th>
-
-				</tr>
-				<s:iterator value="#session.createUser">
+			<s:if test="#session.createUser==null">
+				<h3>ユーザー登録情報はありません。</h3>
+			</s:if>
+			<s:elseif test="message ==null">
+				<h3>ユーザー登録情報は以下になります。</h3>
+				<table border="1">
 					<tr>
-						<td><input type="checkbox" name="check"></td>
-						<td><s:property value="loginId" /></td>
-						<td><s:property value="loginPassword" /></td>
-						<td><s:property value="userName" /></td>
-						<td><s:property value="insert_date" /></td>
-
+						<th>CHECK</th>
+						<th>USER ID</th>
+						<th>PASSWORD</th>
+						<th>USER NAME</th>
+						<th>BIRTH DAY</th>
 
 					</tr>
-				</s:iterator>
-			</table>
-			<s:form action="ItemListAction">
-				<input type="hidden" name="deleteFlg" value="1">
-				<s:submit value="削除" method="delete" />
-			</s:form>
+					<s:iterator value="#session.createUser">
+						<tr>
+							<td><input type="checkbox" name="check"></td>
+							<td><s:property value="loginId" /></td>
+							<td><s:property value="loginPassword" /></td>
+							<td><s:property value="userName" /></td>
+							<td><s:property value="insert_date" /></td>
+
+
+						</tr>
+					</s:iterator>
+				</table>
+				<s:form action="UserListDeleteConfirmAction">
+
+					<s:submit value="ユーザー情報一括削除" />
+				</s:form>
+			</s:elseif>
 
 			<s:if test="message !=null">
 				<h3>

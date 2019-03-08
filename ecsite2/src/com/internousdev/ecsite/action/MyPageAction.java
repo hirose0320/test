@@ -49,8 +49,6 @@ public class MyPageAction extends ActionSupport implements SessionAware {
 		}
 	}
 
-
-
 	public String getDeleteFlg() {
 		return deleteFlg;
 	}

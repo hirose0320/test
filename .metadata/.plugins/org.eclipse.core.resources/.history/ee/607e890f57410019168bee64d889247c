@@ -1,0 +1,10 @@
+package com.internousdev.ecsite.action;
+
+public class Wawawa {
+
+	public static void main(String[] args) {
+		System.out.println(arg[0] + "" + arg[1]);
+
+	}
+
+}

@@ -1,0 +1,29 @@
+package com.internousdev.ecsite.action;
+
+import java.sql.SQLException;
+
+import org.apache.struts2.interceptor.SessionAware;
+
+import com.internousdev.ecsite.dao.UserListDeleteDAO;
+import com.opensymphony.xwork2.ActionSupport;
+
+public class UserListDeleteConfirmAction extends ActionSupport implements SessionAware {
+
+	public void delete() throws SQLException {
+
+		UserListDeleteDAO dao = new UserListDeleteDAO();
+		String result = ERROR;
+
+		int a = dao.delete();
+
+		if (a == 0) {
+			result = SUCCESS;
+			System.out.println("i");
+
+			return result;
+
+		}
+		return result;
+
+	}
+}
