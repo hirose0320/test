@@ -104,7 +104,7 @@ table {
 			</s:if>
 			<div id="text-right">
 				<p>
-					Homeへ戻る場合は<a href='<s:url action="GoHomeAction"/>'>こちら</a>
+					管理者画面は <a href='<s:url action="AdminAction"/>'>こちら</a>
 				</p>
 
 			</div>

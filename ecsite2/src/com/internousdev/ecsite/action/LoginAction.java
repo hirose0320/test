@@ -18,21 +18,24 @@ public class LoginAction extends ActionSupport implements SessionAware {
 	private LoginDAO loginDAO = new LoginDAO();
 	private LoginDTO loginDTO = new LoginDTO();
 	private BuyItemDAO buyDAO = new BuyItemDAO();
+	private String adminFlg;
 
 	public String execute() {
 		String result = ERROR;
 		loginDTO = loginDAO.getLoginUserInfo(loginUserId, loginPassword);
 		session.put("loginUser", loginDTO);
 		if (((LoginDTO) session.get("loginUser")).getLoginFlg()) {
-			if (((LoginDTO) session.get("loginUser")).getAdminFlg() != null) {
+			if (((LoginDTO) session.get("loginUser")).getAdminFlg().equals("1")) {
 				result = "admin";
 
 				session.put("admin", loginDTO.getAdminFlg());
+				System.out.println(((LoginDTO) session.get("loginUser")).getAdminFlg());
 			} else {
 				result = SUCCESS;
 				BuyItemDTO bDTO = buyDAO.getBuyItemInfo();
 
 				session.put("login_user_id", loginDTO.getLoginId());
+				session.put("userName", loginDTO.getUserName());
 				session.put("id", bDTO.getId());
 				session.put("buyItem_name", bDTO.getItemName());
 				session.put("buyItem_price", bDTO.getItemPrice());
@@ -60,4 +63,13 @@ public class LoginAction extends ActionSupport implements SessionAware {
 	public void setSession(Map<String, Object> session) {
 		this.session = session;
 	}
+
+	public String getAdminFlg() {
+		return adminFlg;
+	}
+
+	public void setAdminFlg(String adminFlg) {
+		this.adminFlg = adminFlg;
+	}
+
 }

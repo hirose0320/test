@@ -82,11 +82,11 @@ table {
 					</tr>
 					<tr id="box">
 						<td><label>販売価格:</label></td>
-						<td><s:property value="iprice" escape="false" /></td>
+						<td><s:property value="iprice" escape="false" /><span>円</span></td>
 					</tr>
 					<tr id="box">
 						<td><label>在庫数:</label></td>
-						<td><s:property value="istock" escape="false" /></td>
+						<td><s:property value="istock" escape="false" /><span>個</span></td>
 					</tr>
 					<tr>
 						<td><s:submit value="完了" /></td>
@@ -95,6 +95,8 @@ table {
 
 
 			</table>
+			<br> <span>前画面に戻る場合は</span> <a
+				href='<s:url action="ItemCreateAction"/>'>こちら</a>
 		</div>
 	</div>
 

@@ -81,16 +81,7 @@ table {
 			<p>
 				新規ユーザー登録は <a href='<s:url action="UserCreateAction"/>'>こちら</a>
 			</p>
-			<p>
-				ユーザー登録情報は <a href='<s:url action="UserListAction"/>'>こちら</a>
-			</p>
-			<p>
-				新規商品登録は <a href='<s:url action="ItemCreateAction"/>'>こちら</a>
-			</p>
 
-			<p>
-				商品情報は <a href='<s:url action="ItemListAction"/>'>こちら</a>
-			</p>
 			<p>
 				Homeへ戻る場合は <a href='<s:url action="GoHomeAction"/>'>こちら</a>
 			</p>

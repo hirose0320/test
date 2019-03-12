@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="&apos;ind1.jpg&apos; を &apos;img&apos; に移動" description="&apos;ind1.jpg&apos; を &apos;img&apos; に移動" destination="WebContent/img" element1="ind1.jpg" flags="7" id="org.eclipse.ltk.core.refactoring.move.resources" resources="1" stamp="1552279204808" updateReferences="true"/>&#x0A;<refactoring comment="&apos;back01.jpg&apos; を &apos;img&apos; に移動" description="&apos;back01.jpg&apos; を &apos;img&apos; に移動" destination="WebContent/img" element1="back01.jpg" flags="7" id="org.eclipse.ltk.core.refactoring.move.resources" resources="1" stamp="1552279480608" updateReferences="true"/>
+</session>

@@ -72,9 +72,7 @@ table {
 			<h3>商品の登録が完了しました。</h3>
 			<div>
 				<a href='<s:url action="ItemListAction"/>'>商品一覧</a><span>から商品情報の確認が可能です。</span>
-				<p>
-					Homeへ戻る場合は<a href='<s:url action="GoHomeAction" />'>こちら</a>
-				</p>
+
 			</div>
 			<div>
 				<a href='<s:url action="AdminAction"/>'>管理者画面へ</a>

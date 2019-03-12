@@ -1,0 +1,12 @@
+package abc;
+
+public class Sample {
+
+	private int num;
+	private String name;
+
+	public Sample(int num, String name) {
+		this.num = num;
+		this.name = name;
+	}
+}

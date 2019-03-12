@@ -1,0 +1,13 @@
+package abc;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO 自動生成されたメソッド・スタブ
+		int point = 80;
+		String val = point < 40 ? "D" : point < 60 ? "C" : point < 80 ? "A" : "B";
+		System.out.println(val);
+
+	}
+
+}

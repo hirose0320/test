@@ -20,8 +20,9 @@ body {
 	letter-spacing: 1px;
 	font-family: Verdana, Helvetica, sans-serif;
 	font-size: 12px;
-	color: #333;
 	background: #fff;
+	background-image: url("img/back2.jpg");
+	color: black;
 }
 
 table {
@@ -32,13 +33,14 @@ table {
 #top {
 	width: 780ox;
 	margin: 30px auto;
-	border: 1px solid #333;
+	border: 1px solid black;
 }
 
 #header {
 	width: 100%;
 	height: 80px;
 	background-color: black;
+	color: black;
 }
 
 #main {
@@ -86,9 +88,13 @@ table {
 				商品情報は <a href='<s:url action="ItemListAction"/>'>こちら</a>
 			</p>
 			<p>
-				ログアウトする場合は <a href='<s:url action="LogoutAction"/>'>こちら</a>
+				ホームは <a href='<s:url action="GoHomeAction"/>'>こちら</a>
 			</p>
 		</div>
+		<img
+			src="https://study-abroad.misao.in/wp-content/uploads/2014/11/IMG_9901.jpg"
+			height=300px width=500px;>
+
 	</div>
 	<div id="footer">
 		<div id="pr"></div>

@@ -53,6 +53,7 @@ table {
 	background-color: black;
 	clear: both;
 }
+
 #text-center {
 	display: inline-block;
 	text-align: center;
@@ -70,7 +71,12 @@ table {
 		<div>
 			<h3>ユーザーの登録が完了しました。</h3>
 			<div>
-				<a href='<s:url action="HomeAction"/>'>ログインへ</a>
+				<s:if test="#session.admin !=null">
+					<a href='<s:url action="AdminAction"/>'>管理者画面へ</a>
+				</s:if>
+				<s:else>
+					<a href='<s:url action="HomeAction"/>'>ログイン画面へ</a>
+				</s:else>
 			</div>
 		</div>
 	</div>

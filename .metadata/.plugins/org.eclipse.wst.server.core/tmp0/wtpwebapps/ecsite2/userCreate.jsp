@@ -85,7 +85,22 @@ table {
 				</s:form>
 			</table>
 			<div>
-				<span>前画面に戻る場合は</span> <a href='<s:url action="HomeAction"/>'>こちら</a>
+
+
+				<s:if test="#session.admin !=null">
+					<p>
+						管理者画面は <a href='<s:url action="AdminAction"/>'>こちら</a>
+					</p>
+				</s:if>
+				<s:else>
+					<span>前画面に戻る場合は</span>
+					<a href='<s:url action="HomeAction"/>'>こちら</a>
+				</s:else>
+				<s:if test="#session.id !=null">
+					<p>
+						ログアウトする場合は <a href='<s:url action="LogoutAction"/>'>こちら</a>
+					</p>
+				</s:if>
 			</div>
 		</div>
 	</div>
