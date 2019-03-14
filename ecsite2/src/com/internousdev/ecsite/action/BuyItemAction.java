@@ -12,7 +12,6 @@ public class BuyItemAction extends ActionSupport implements SessionAware {
 	private int count;
 	private String pay;
 
-
 	public String execute() {
 		String result = SUCCESS;
 

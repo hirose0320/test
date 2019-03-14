@@ -1,7 +1,0 @@
-package com.internousdev.ecsite.dao;
-
-public class UserListDeleteDAO {
-
-	// insert_date=nullを除いてすべてのユーザー情報を一括削除する
-
-}

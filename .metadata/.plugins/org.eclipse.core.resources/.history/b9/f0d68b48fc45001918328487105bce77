@@ -1,0 +1,17 @@
+package abc;
+
+public class Sample {
+
+	private String value;
+
+	public String getValue() {
+		return value;
+	}
+
+	public void setValue(String value) {
+		this.value = value;
+	}
+
+	int num = 0;
+
+}
