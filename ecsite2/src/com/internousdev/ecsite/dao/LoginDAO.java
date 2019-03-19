@@ -13,6 +13,7 @@ public class LoginDAO {
 	Connection con = db.getConnection();
 	private LoginDTO loginDTO = new LoginDTO();
 
+
 	public LoginDTO getLoginUserInfo(String loginUserId, String loginPassword) {
 		String sql = "SELECT * FROM login_user_transaction where login_id=? AND login_pass=?";
 
@@ -25,10 +26,12 @@ public class LoginDAO {
 			ResultSet rs = ps.executeQuery();
 
 			if (rs.next()) {
+
 				loginDTO.setLoginId(rs.getString("login_id"));
 				loginDTO.setLoginPassword(rs.getString("login_pass"));
 				loginDTO.setUserName("user_name");
 				loginDTO.setAdminFlg(rs.getString("admin_flg"));
+
 
 				if (!(rs.getString("login_id").equals(null))) {
 					loginDTO.setLoginFlg(true);

@@ -1,0 +1,58 @@
+
+public class aaasa {
+	1
+	2
+	3
+	4
+	5
+	6
+	7
+	8
+	9
+	10
+	11
+	12
+	13
+	14
+	15
+	16
+	17
+	18
+	19
+	20
+	21
+	22
+	23
+	24
+	25
+	26
+	27
+	28
+
+import java.util.Map;import java.util.HashMap;
+import java.util.Iterator;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// Mapの宣言
+		Map<String, Integer> map = new HashMap<String, Integer>();
+
+		// Mapに要素を追加
+		map.put("apple", 100);
+		map.put("orange", 200);
+		map.put("melon", 300);
+
+		// Iterator<Map.Entry<String, Integer>> の宣言
+		Iterator<Map.Entry<String, Integer>> itr = map.entrySet().iterator();
+
+		// key, valueの取得
+		while (itr.hasNext()) {
+			// nextを使用して値を取得する
+			Map.Entry<String, Integer> entry = itr.next();
+
+			System.out.println(entry.getKey() + " : " + entry.getValue());
+		}
+	}
+
+}}

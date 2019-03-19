@@ -1,0 +1,51 @@
+package com.internousdev.ecsite.action;
+
+import java.util.ArrayList;
+import java.util.Map;
+
+import org.apache.struts2.interceptor.SessionAware;
+
+import com.internousdev.ecsite.dao.BuyItemDAO;
+import com.internousdev.ecsite.dto.BuyItemDTO;
+import com.opensymphony.xwork2.ActionSupport;
+
+public class HomeAction extends ActionSupport implements SessionAware {
+	public Map<String, Object> session;
+	private ArrayList<BuyItemDTO> bList = new ArrayList<BuyItemDTO>();
+	private BuyItemDAO buyDAO = new BuyItemDAO();
+
+	public String execute() {
+		String result = "login";
+		if (session.containsKey("id")) {
+			BuyItemDTO bDTO = new BuyItemDTO();
+			System.out.println(session.containsKey("id"));
+			BuyItemDAO DAO = new BuyItemDAO();
+			bList = buyDAO.getBuyItemInfo();
+			BuyItemDTO bDTO = new BuyItemDTO();
+			session.put("id", DTO.getId());
+			session.put("buyItem_name", DTO.getItemName());
+			session.put("buyItem_price", DTO.getItemPrice());
+
+			result = SUCCESS;
+		}
+		return result;
+	}
+
+	public void setSession(Map<String, Object> session) {
+		this.session = session;
+	}
+
+	public Map<String, Object> getSession() {
+		return this.session;
+
+	}
+
+	public ArrayList<BuyItemDTO> getbList() {
+		return bList;
+	}
+
+	public void setbList(ArrayList<BuyItemDTO> bList) {
+		this.bList = bList;
+	}
+
+}

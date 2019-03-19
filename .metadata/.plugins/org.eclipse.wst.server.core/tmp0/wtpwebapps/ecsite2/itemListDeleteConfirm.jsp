@@ -13,8 +13,7 @@
 <link href="https://fonts.googleapis.com/earlyaccess/hannari.css"
 	rel="stylesheet">
 <script
-	src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js
-"></script>
+	src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <title>削除確認画面</title>
 
 <style type="text/css">

@@ -1,5 +1,7 @@
 package com.internousdev.ecsite.action;
 
+import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.Map;
 
 import org.apache.struts2.interceptor.SessionAware;
@@ -9,17 +11,17 @@ import com.internousdev.ecsite.dto.BuyItemDTO;
 import com.opensymphony.xwork2.ActionSupport;
 
 public class HomeAction extends ActionSupport implements SessionAware {
-
 	public Map<String, Object> session;
+	private ArrayList<BuyItemDTO> bList = new ArrayList<BuyItemDTO>();
+	private BuyItemDAO buyDAO = new BuyItemDAO();
 
-	public String execute() {
+	public String execute() throws SQLException {
 		String result = "login";
-		if (session.containsKey("id")) {
-			BuyItemDAO DAO = new BuyItemDAO();
-			BuyItemDTO DTO = DAO.getBuyItemInfo();
-			session.put("id", DTO.getId());
-			session.put("buyItem_name", DTO.getItemName());
-			session.put("buyItem_price", DTO.getItemPrice());
+		if (session.containsKey("bList")) {
+
+			bList = buyDAO.getBuyItemInfo();
+
+			session.put("bList", bList);
 
 			result = SUCCESS;
 		}
@@ -34,4 +36,13 @@ public class HomeAction extends ActionSupport implements SessionAware {
 		return this.session;
 
 	}
+
+	public ArrayList<BuyItemDTO> getbList() {
+		return bList;
+	}
+
+	public void setbList(ArrayList<BuyItemDTO> bList) {
+		this.bList = bList;
+	}
+
 }

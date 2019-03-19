@@ -69,7 +69,7 @@ table {
 			<p>Home</p>
 		</div>
 		<div id="text-center">
-			<s:if test="#session.id !=null">
+			<s:if test="#session.bList !=null">
 				<p>【ログイン中】
 			</s:if>
 			<s:if test="#session.admin !=null">
@@ -89,7 +89,7 @@ table {
 				</s:form>
 			</s:else>
 
-			<s:if test="#session.id !=null">
+			<s:if test="#session.bList !=null">
 				<p>
 					ログアウトする場合は <a href='<s:url action="LogoutAction"/>'>こちら</a>
 				</p>

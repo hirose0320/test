@@ -1,0 +1,7 @@
+package abc;
+
+public class Parent {
+	public String name;
+	// name フィールドを作ってmain7_1に継承
+
+}

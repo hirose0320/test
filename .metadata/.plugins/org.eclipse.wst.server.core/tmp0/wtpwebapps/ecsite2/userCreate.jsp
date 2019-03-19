@@ -96,7 +96,7 @@ table {
 					<span>前画面に戻る場合は</span>
 					<a href='<s:url action="HomeAction"/>'>こちら</a>
 				</s:else>
-				<s:if test="#session.id !=null">
+				<s:if test="#session.bList !=null">
 					<p>
 						ログアウトする場合は <a href='<s:url action="LogoutAction"/>'>こちら</a>
 					</p>

@@ -12,7 +12,7 @@ import com.internousdev.ecsite.util.DBConnector;
 
 public class ItemListDAO {
 
-	List<ItemListDTO> itemList = new ArrayList<ItemListDTO>();
+	List<ItemListDTO> itemList = new ArrayList<>();
 
 	public List<ItemListDTO> select() {
 		DBConnector db = new DBConnector();

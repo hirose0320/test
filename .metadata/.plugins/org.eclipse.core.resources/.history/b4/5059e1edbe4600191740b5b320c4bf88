@@ -1,0 +1,6 @@
+package abc;
+
+public class Parent {
+	public String hello;
+
+}

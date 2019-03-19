@@ -18,7 +18,7 @@ public class MyPageAction extends ActionSupport implements SessionAware {
 	private String message;
 
 	public String execute() throws SQLException {
-		if (!session.containsKey("id")) {
+		if (!session.containsKey("bList")) {
 			return ERROR;
 		}
 		if (deleteFlg == null) {

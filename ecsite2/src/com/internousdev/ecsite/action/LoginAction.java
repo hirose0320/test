@@ -1,5 +1,7 @@
 package com.internousdev.ecsite.action;
 
+import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.Map;
 
 import org.apache.struts2.interceptor.SessionAware;
@@ -15,12 +17,13 @@ public class LoginAction extends ActionSupport implements SessionAware {
 	private String loginUserId;
 	private String loginPassword;
 	public Map<String, Object> session;
+	private ArrayList<BuyItemDTO> bList = new ArrayList<BuyItemDTO>();
 	private LoginDAO loginDAO = new LoginDAO();
 	private LoginDTO loginDTO = new LoginDTO();
 	private BuyItemDAO buyDAO = new BuyItemDAO();
 	private String adminFlg;
 
-	public String execute() {
+	public String execute() throws SQLException {
 		String result = ERROR;
 		loginDTO = loginDAO.getLoginUserInfo(loginUserId, loginPassword);
 		session.put("loginUser", loginDTO);
@@ -32,13 +35,12 @@ public class LoginAction extends ActionSupport implements SessionAware {
 				System.out.println(((LoginDTO) session.get("loginUser")).getAdminFlg());
 			} else {
 				result = SUCCESS;
-				BuyItemDTO bDTO = buyDAO.getBuyItemInfo();
+				bList = buyDAO.getBuyItemInfo();
 
 				session.put("login_user_id", loginDTO.getLoginId());
 				session.put("userName", loginDTO.getUserName());
-				session.put("id", bDTO.getId());
-				session.put("buyItem_name", bDTO.getItemName());
-				session.put("buyItem_price", bDTO.getItemPrice());
+				session.put("bList", bList);
+
 			}
 		}
 		return result;
@@ -70,6 +72,18 @@ public class LoginAction extends ActionSupport implements SessionAware {
 
 	public void setAdminFlg(String adminFlg) {
 		this.adminFlg = adminFlg;
+	}
+
+	public ArrayList<BuyItemDTO> getbList() {
+		return bList;
+	}
+
+	public void setbList(ArrayList<BuyItemDTO> bList) {
+		this.bList = bList;
+	}
+
+	public Map<String, Object> getSession() {
+		return this.session;
 	}
 
 }
