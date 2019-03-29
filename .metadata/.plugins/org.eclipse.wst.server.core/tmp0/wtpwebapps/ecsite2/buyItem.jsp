@@ -25,7 +25,7 @@ body {
 }
 
 table {
-	text-align: center;
+	text-align: center;c
 	margin: 0 auto;
 }
 
@@ -115,7 +115,7 @@ table {
 			</s:form>
 			<s:form action="BuyItemAction" theme="simple">
 				<a>ようこそ！ <s:property value="session.userName" /> <span>さん！！！</span></a>
-				<table border="1">
+				<table>
 					<tr>
 						<th>商品ID</th>
 						<th>商品名</th>
@@ -123,13 +123,17 @@ table {
 						<th>在庫</th>
 						<th>購入</th>
 					</tr>
-					<s:iterator value="bList">
+					<s:iterator value="bList" status="st">
 						<tr>
 							<td><s:property value="id" /></td>
 							<td><s:property value="itemName" /></td>
 							<td><s:property value="itemPrice" /><span>円</span></td>
 							<td><s:property value="itemStock" /><span>個</span></td>
 							<td><s:submit value="購入" /></td>
+							<td>
+								<input type ="checkbox" value="<s:property value="#st.index" />" name ="id">
+							</td>
+
 						</tr>
 						<tr>
 							<td><span>購入個数</span></td>

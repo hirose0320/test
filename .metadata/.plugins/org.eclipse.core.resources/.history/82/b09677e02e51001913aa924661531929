@@ -1,0 +1,10 @@
+package abc;
+
+public class Practice26_Q3 {
+
+	public static void main(String[] args) {
+		while (false) {
+			System.out.println("こんにちは");
+		}
+	}
+}

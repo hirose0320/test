@@ -1,7 +1,0 @@
-package abc;
-
-public class Sample {
-
-	private String value;
-
-}

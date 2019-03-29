@@ -1,0 +1,7 @@
+package abc;
+
+abstract class Abs {
+	static void hello() {
+		System.out.println("hello");
+	}
+}

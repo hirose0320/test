@@ -1,6 +1,0 @@
-package abc;
-
-public class Sample {
-
-private value;
-}

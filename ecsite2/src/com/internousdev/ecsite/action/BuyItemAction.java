@@ -1,5 +1,6 @@
 package com.internousdev.ecsite.action;
 
+import java.util.ArrayList;
 import java.util.Map;
 
 import org.apache.struts2.interceptor.SessionAware;
@@ -9,11 +10,20 @@ import com.opensymphony.xwork2.ActionSupport;
 public class BuyItemAction extends ActionSupport implements SessionAware {
 
 	public Map<String, Object> session;
-	private int count;
+	private int[] count;
+	private ArrayList<String> id;
 	private String pay;
 
 	public String execute() {
 		String result = SUCCESS;
+
+//		for (int i : count) {
+//			System.out.println(i);
+//		}
+		for(String j : id){
+			System.out.println(j);
+			
+		}
 
 		session.put("count", count);
 		int intCount = Integer.parseInt(session.get("count").toString());
@@ -31,11 +41,19 @@ public class BuyItemAction extends ActionSupport implements SessionAware {
 		return result;
 	}
 
-	public int getCount() {
+	public ArrayList<String> getId() {
+		return id;
+	}
+
+	public void setId(ArrayList<String> id) {
+		this.id = id;
+	}
+
+	public int[] getCount() {
 		return count;
 	}
 
-	public void setCount(int count) {
+	public void setCount(int[] count) {
 		this.count = count;
 	}
 

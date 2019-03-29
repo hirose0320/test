@@ -1,0 +1,8 @@
+package abc;
+
+public class ______________________________________________________________________________________ {
+	public static void main(String[] args) {
+		double result = 3.00 / 10.00;
+		System.out.println(result);
+	}
+}

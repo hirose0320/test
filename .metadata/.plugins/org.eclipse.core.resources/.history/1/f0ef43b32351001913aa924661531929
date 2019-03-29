@@ -1,0 +1,15 @@
+package abc;
+
+public class Practice26_Q3 {
+    public static void main(String[] args) {
+        Dog pochi = new Dog("ポチ");
+        System.out.println(pochi.name);
+    }
+}
+
+class Dog {
+    String name;
+    Dog(String n) {
+        name = n;
+    }
+}

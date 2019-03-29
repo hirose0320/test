@@ -1,0 +1,19 @@
+package abc;
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class ExampleString5 {
+
+	public static void main(String[] args) {
+		String data = "a-@bc@example.com";
+		Pattern p = Pattern.compile("[\\w\\.\\-]+@(?:[\\w\\-]+\\.)+[\\w\\-]+");
+		Matcher m = p.matcher(data);
+		if (m.matches()) {
+			System.out.println("This is a mail address.");
+		} else {
+			System.out.println("This is not a mail address.");
+		}
+
+	}
+}
